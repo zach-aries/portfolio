@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-  basePath: "/gh-pages-test",
+  basePath: "/portfolio",
 };
 
 module.exports = nextConfig;
