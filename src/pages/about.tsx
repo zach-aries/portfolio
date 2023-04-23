@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 
 import styles from "@/styles/about.styles";
 import generalStyles from "@/styles/general.styles";
+import Navigation from "@/components/molecules/Navigation";
 import AboutMe from "@/components/molecules/About";
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] });
@@ -17,6 +18,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/portfolio/favicon.ico" />
       </Head>
+      <Navigation />
       <main className={classes(generalStyles.main, roboto.className)}>
         <div className={classes(generalStyles.row, styles.headerSeperator)}>
           <div className={generalStyles.column(67)}>
