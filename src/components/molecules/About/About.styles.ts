@@ -17,7 +17,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    marginLeft: "16vw",
+    marginLeft: "20vw",
     zIndex: 1,
     lineHeight: 1,
     $nest: {
