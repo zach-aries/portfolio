@@ -28,6 +28,15 @@ const displayTextAnimation = keyframes({
   },
 });
 
+const subTitleAnimation = keyframes({
+  "0%": {
+    marginTop: "-100%",
+  },
+  "100%": {
+    marginTop: "0%",
+  },
+});
+
 const seperatorAnimation = keyframes({
   "0%": {
     width: "100%",
@@ -50,7 +59,7 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: FINAL_HEIGHT + 2,
+    height: FINAL_HEIGHT + 2 + 61,
     width: "100%",
   }),
   displayText: style({
@@ -67,6 +76,28 @@ const styles = {
     animationName: displayTextAnimation,
     animationDuration: "3s",
     animationTimingFunction: "ease-out",
+  }),
+  subtitleWrapper: style({
+    $debugName: "subtitleWrapper",
+    opacity: 1,
+    maxHeight: 46,
+    marginTop: 15,
+    overflow: "hidden",
+  }),
+  subtitle: style({
+    $debugName: "subtitle",
+    fontSize: 32,
+    letterSpacing: "0.1em",
+    lineHeight: 1,
+    color: colors.yellow.base,
+    textTransform: "uppercase",
+    height: 46,
+    marginTop: "-100%",
+    animationName: subTitleAnimation,
+    animationDuration: "1s",
+    animationDelay: "3s",
+    animationTimingFunction: "ease-out",
+    animationFillMode: "forwards",
   }),
   seperator: style({
     width: "55%",

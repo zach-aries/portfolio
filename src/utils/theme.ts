@@ -1,7 +1,7 @@
 export const colors = {
   blue: {
-    base: "#212331",
-    500: "#212331",
+    base: "#313349",
+    800: "#212331",
     300: "#414562",
   },
   green: {
@@ -12,9 +12,13 @@ export const colors = {
   },
   white: {
     base: "#F7F9F9",
+    800: "#DDE4E4",
   },
   grey: {
     base: "#717C89",
+  },
+  yellow: {
+    base: "#FAD54D",
   },
 };
 

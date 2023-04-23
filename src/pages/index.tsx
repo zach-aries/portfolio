@@ -1,13 +1,12 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 
 import styles from "@/styles/home.styles";
 import Hero from "@/components/molecules/Hero";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ weight: "500", subsets: ["latin"] });
 
 export default function Home() {
-  console.log(inter.className);
   return (
     <>
       <Head>
@@ -16,9 +15,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/portfolio/favicon.ico" />
       </Head>
-      <main className={inter.className}>
+      <main className={roboto.className}>
         <div className={styles.heroContainer}>
-          <Hero title="Zach J. Aries" />
+          <Hero title="Zach Aries" />
         </div>
       </main>
     </>
