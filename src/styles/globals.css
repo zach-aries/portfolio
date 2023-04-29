@@ -25,3 +25,21 @@ h3 {
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+
+h4 {
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+ul {
+  margin: 10px;
+  margin: 10px 0;
+  padding: 0 22px;
+}
+
+li {
+  font-size: 14px;
+}

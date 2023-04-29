@@ -21,6 +21,13 @@ const styles = {
       paddingTop: spacing,
       paddingBottom: spacing,
     }),
+  marginBottom: (marginBottom: number) =>
+    style({
+      $debugName: "verticalSpacing",
+      marginBottom,
+    }),
+  fontColor: (color: string) =>
+    style({ $debugName: `fontColor${color}`, color }),
 };
 
 export default styles;
