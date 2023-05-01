@@ -7,7 +7,7 @@ import styles from "@/styles/sudoku.styles";
 import generalStyles from "@/styles/general.styles";
 import Navigation from "@/components/molecules/Navigation";
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 interface NumberSelectorProps {
   position?: {
@@ -39,7 +39,7 @@ function NumberSelector(props: NumberSelectorProps) {
           className={styles.numberButton}
           onClick={() => handleClick(number)}
         >
-          {number}
+          {number === 0 ? "X" : number}
         </li>
       ))}
     </ul>
@@ -172,6 +172,22 @@ export default function Sudoku(props: Props) {
             </div>
           ))}
         </div>
+        <button
+          style={{ marginTop: 25 }}
+          onClick={() => {
+            const newGrid: Grid = newStartingBoard(81 - 37).map((row) =>
+              row.map((value) =>
+                value === 0
+                  ? { type: "dynamic", value, safe: true }
+                  : { type: "static", value, safe: true }
+              )
+            );
+            setGrid(newGrid);
+            setSelectorPosition(undefined);
+          }}
+        >
+          New Game
+        </button>
       </main>
     </>
   );

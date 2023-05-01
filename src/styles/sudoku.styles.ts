@@ -81,7 +81,7 @@ const styles = {
     $debugName: "numberSelector",
     display: "flex",
     flexDirection: "row",
-    width: 48 * 9,
+    width: 48 * 10,
     listStyle: "none",
     margin: "25px 0",
     padding: 0,
@@ -90,7 +90,7 @@ const styles = {
     borderBottom: "solid 1px black",
     $nest: {
       "@media only screen and (max-width: 560px)": {
-        width: 36 * 9,
+        width: 36 * 10,
       },
     },
   }),
