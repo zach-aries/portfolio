@@ -15,6 +15,9 @@ export const colors = {
     800: "#DDE4E4",
   },
   grey: {
+    300: "#E9EAED",
+    400: "#DDDDE3",
+    600: "#C7C7D1",
     base: "#717C89",
   },
   yellow: {
