@@ -22,6 +22,9 @@ const styles = {
       "&:nth-child(3n+1)": {
         borderTop: "solid 2px black",
       },
+      "@media only screen and (max-width: 560px)": {
+        width: 36 * 9,
+      },
     },
   }),
   cell: style({
@@ -41,6 +44,10 @@ const styles = {
       },
       "&:nth-child(3n+1)": {
         borderLeft: "solid 3px black",
+      },
+      "@media only screen and (max-width: 560px)": {
+        height: 36,
+        width: 36,
       },
     },
   }),
@@ -74,13 +81,18 @@ const styles = {
     $debugName: "numberSelector",
     display: "flex",
     flexDirection: "row",
-    width: 48 * 10,
+    width: 48 * 9,
     listStyle: "none",
     margin: "25px 0",
     padding: 0,
     borderTop: "solid 1px black",
     borderLeft: "solid 1px black",
     borderBottom: "solid 1px black",
+    $nest: {
+      "@media only screen and (max-width: 560px)": {
+        width: 36 * 9,
+      },
+    },
   }),
   numberButton: style({
     $debugName: "numberButton",
@@ -95,6 +107,10 @@ const styles = {
     $nest: {
       "&:hover": {
         background: colors.white[800],
+      },
+      "@media only screen and (max-width: 560px)": {
+        height: 36,
+        width: 36,
       },
     },
   }),

@@ -7,7 +7,7 @@ import styles from "@/styles/sudoku.styles";
 import generalStyles from "@/styles/general.styles";
 import Navigation from "@/components/molecules/Navigation";
 
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 interface NumberSelectorProps {
   position?: {
@@ -39,7 +39,7 @@ function NumberSelector(props: NumberSelectorProps) {
           className={styles.numberButton}
           onClick={() => handleClick(number)}
         >
-          {number === 0 ? "Clear" : number}
+          {number}
         </li>
       ))}
     </ul>
