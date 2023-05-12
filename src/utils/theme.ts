@@ -25,8 +25,15 @@ export const colors = {
   },
 };
 
+export const mediaQuery = {
+  phone: "@media only screen and (max-width: 415px)",
+  tablet: "@media only screen and (min-width:415px) and (max-width:961px)",
+  desktop: "@media only screen and (min-width:961px)",
+};
+
 const theme = {
   colors,
+  mediaQuery,
 };
 
 export default theme;

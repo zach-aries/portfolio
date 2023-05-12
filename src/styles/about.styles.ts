@@ -1,5 +1,6 @@
 import { style } from "typestyle";
-import { colors } from "@/utils/theme";
+import { important } from "csx";
+import { colors, mediaQuery } from "@/utils/theme";
 
 const styles = {
   headerSeperator: style({
@@ -23,12 +24,26 @@ const styles = {
     $debugName: "infoPanel",
     background: colors.white[800],
     alignSelf: "stretch",
-    minHeight: 575,
+    $nest: {
+      [mediaQuery.desktop]: {
+        minHeight: 575,
+      },
+    },
+  }),
+  content: style({
+    $debugName: "content",
+    flexDirection: important("column-reverse"),
+    $nest: {
+      [mediaQuery.desktop]: {
+        flexDirection: important("row"),
+      },
+    },
   }),
   profile: style({
     $debugName: "profile",
     display: "flex",
     alignItems: "flex-end",
+    paddingTop: "40px !important",
     paddingBottom: "40px !important",
     color: colors.blue.base,
   }),
@@ -58,18 +73,6 @@ const styles = {
     fontSize: 15,
     fontStyle: "italic",
     color: colors.grey.base,
-  }),
-  iconList: style({
-    $debugName: "iconList",
-    display: "flex",
-    flexWrap: "wrap",
-    listStyle: "none",
-    padding: 0,
-    $nest: {
-      "& > li": {
-        lineHeight: 0,
-      },
-    },
   }),
 };
 

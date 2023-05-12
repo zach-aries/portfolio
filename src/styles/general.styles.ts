@@ -1,4 +1,5 @@
 import { style } from "typestyle";
+import { mediaQuery } from "@/utils/theme";
 
 const styles = {
   main: style({
@@ -8,18 +9,29 @@ const styles = {
   row: style({
     $debugName: "row",
     display: "flex",
+    flexDirection: "column",
+    $nest: {
+      [mediaQuery.desktop]: {
+        flexDirection: "row",
+      },
+    },
   }),
   column: (width: number) =>
     style({
       $debugName: "column",
       padding: "0 2.5%",
-      width: width ? `${width}%` : "100%",
+      width: "100%",
+      $nest: {
+        [mediaQuery.desktop]: {
+          width: width ? `${width}%` : "100%",
+        },
+      },
     }),
   verticalSpacing: (spacing: number) =>
     style({
       $debugName: "verticalSpacing",
-      paddingTop: spacing,
-      paddingBottom: spacing,
+      paddingTop: `${spacing}px !important`,
+      paddingBottom: `${spacing}px !important`,
     }),
   marginBottom: (marginBottom: number) =>
     style({
