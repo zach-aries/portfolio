@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { classes } from "typestyle";
 import { Roboto, Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
 import { colors } from "@/utils/theme";
 import styles from "@/styles/about.styles";
@@ -13,43 +14,69 @@ const playfair = Playfair_Display({ weight: "400", subsets: ["latin"] });
 
 const workExperiences = [
   {
-    company: "Amazon - Ad Tech",
+    company: "Amazon",
     title: "Frontend Engineer II",
     dates: {
       start: "2021",
       end: "Present",
     },
     responsibilites: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Create peer reviewed design documents ensuring scalable & well designed features",
+      "Design and implementing key features requested by product",
+      "Implement test coverage using Jest and Playwright for unit and E2E testing",
+      "Mentoring team members",
     ],
-    results: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    keyDeliverables: [
+      {
+        description:
+          "Implemented timeline feature to create and control animations",
+        details: [
+          "Typescript, React, Redux, Redux Saga, DynamoDB, Web Animation API",
+          "High focus on render performance, code organization & expandability",
+          "Delivered large feature set outlined by product, users and UX",
+        ],
+      },
+      {
+        description: "Implemented fronted error logging systems",
+        details: [
+          "Typescript, React, Redux, Redux Saga, AWS Cloudwatch",
+          "Created an error logging system that tracks, reports and alerts errors though AWS architecture",
+        ],
+      },
+      {
+        description: "Implemented on-call scripts to manage databases",
+        details: [
+          "Typescript, DynamoDB",
+          "Created several on-call scripts which allowed automatic database creation, duplication and deletion",
+          "Included backup, parallelization & backoff algorithms",
+          "Required to work in production on data sets in the hundreds of thousands",
+        ],
+      },
     ],
   },
   {
-    company: "CriticalMass - Nissan North America",
-    title: "Technical Lead",
+    company: "Critical Mass - Nissan North America",
+    title: "Tech Lead",
     dates: {
       start: "2020",
       end: "2021",
     },
     responsibilites: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Planning of project sprints, architecture, deliverables & development of interactive advertisement web application",
+      "Managed client relations through project timelines by providing LOE’s and solution design for projects",
+      "Managed several teams of direct reports through project lifetimes",
+      "Managed direct reports achieve career goals with support and guidance",
     ],
-    results: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    keyDeliverables: [
+      {
+        description: "Implemented Ariya pre-order website",
+        details: [
+          "React, Node, AWS, Jenkins",
+          "Created a vehicle customization platform which allows customers to build their custom Ariya and view it on a 3D turntable with cinematic cameras",
+          "Lead to thousands of pre-purchase orders full-filled by dealers across North America",
+          "Managed a team of ~10 developers, third party vendors, and key stakeholder requirements in order to meet a tight project deadline",
+        ],
+      },
     ],
   },
   {
@@ -60,16 +87,26 @@ const workExperiences = [
       end: "2020",
     },
     responsibilites: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Designed and implemented key features in a very fast paced environment",
+      "Responsible for the front end team’s sprint progress",
+      "Participated in the recruiting and hiring program",
     ],
-    results: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    keyDeliverables: [
+      {
+        description:
+          "Helped create, recruit and hire for Showpass' first internship program",
+        details: [
+          "Filtered resumes, attended job fairs, selected and interviewed candidates to host our first summer internship program",
+        ],
+      },
+      {
+        description: "Designed and implemented venue seat selection feature",
+        details: [
+          "AngularJS / Django / PostgreSQL",
+          "Allowed users to view and select seats in venues of up to ~100,000",
+          "Helped acquire many valuable clients who previously were unable to host their venue in our platform",
+        ],
+      },
     ],
   },
   {
@@ -80,16 +117,25 @@ const workExperiences = [
       end: "2019",
     },
     responsibilites: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      "Designed and implemented features against tight deadlines",
+      "Helped interview for developer positions",
     ],
-    results: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit Nunc a purus facilisis, luctus ligula ac, viverra orci.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames acturpis egestas.",
-      "Integer at massa blandit, ullamcorper risus ac, mattis ligula.",
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    keyDeliverables: [
+      {
+        description:
+          "Helped create, recruit and hire for Showpass' first internship program",
+        details: [
+          "Filtered resumes, attended job fairs, selected and interviewed candidates to host our first summer internship program",
+        ],
+      },
+      {
+        description: "NextGen Configurator POC",
+        details: [
+          "React / Node.js / GraphQL",
+          "Part of a PoC discovery team to flesh out the applications requirements, architecture and design decisions",
+          "Implemented components, tests and page composition according to requirements",
+        ],
+      },
     ],
   },
 ];
@@ -167,14 +213,25 @@ export default function About() {
                 </ul>
 
                 <h5 className={generalStyles.fontColor(colors.grey.base)}>
-                  Results
+                  Key Deliverables
                 </h5>
                 <ul className={generalStyles.fontColor(colors.grey.base)}>
-                  {workExperience.results.map((result) => (
-                    <li key={`${workExperience.company}-${result}`}>
-                      {result}
-                    </li>
-                  ))}
+                  {workExperience.keyDeliverables.map(
+                    ({ description, details }) => (
+                      <li key={`${workExperience.company}-${description}`}>
+                        {description}
+                        <ul
+                          className={generalStyles.fontColor(colors.grey.base)}
+                        >
+                          {details.map((detail) => (
+                            <li key={`${workExperience.company}-${detail}`}>
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             ))}
@@ -189,23 +246,146 @@ export default function About() {
             <div className={generalStyles.marginBottom(40)}>
               <h2 className={playfair.className}>Profile</h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a
-                purus facilisis, luctus ligula ac, viverra orci. Pellentesque
-                habitant morbi tristique senectus et netus et malesuada fames ac
-                turpis egestas. Integer at massa blandit, ullamcorper risus ac,
-                mattis ligula. Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas.
+                Software engineer with a major in computer science &
+                concentration in software engineering. For 5+ years I have been
+                delivering performant, scalable & accessible web applications. I
+                am consistently looking to create a high impact on teams &
+                produce the best possible product for users. I pride myself on
+                my ability to learn quickly, understand the big picture & work
+                with key stake holders to deliver results
               </p>
             </div>
             <div>
               <h2 className={playfair.className}>Skills</h2>
-              <h3>Technical</h3>
-              <ul>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
-                <li>Lorem ipsum</li>
+              <ul className={styles.iconList}>
+                <li>
+                  <Image
+                    src="tech-icons/js.png"
+                    alt="JavaScript"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/typescript.png"
+                    alt="TypeScript"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/html5.png"
+                    alt="HTML5"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/css3.png"
+                    alt="CSS3"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/reactjs.png"
+                    alt="React"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/angular.png"
+                    alt="Angular"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/aws.png"
+                    alt="AWS"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/docker.png"
+                    alt="Docker"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/mongodb.png"
+                    alt="MongoDB"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/postfresql.png"
+                    alt="PostGreSQL"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/graphql.png"
+                    alt="GraphQL"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/redis.png"
+                    alt="Redis"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/nextjs.png"
+                    alt="NextJS"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/gatsby.png"
+                    alt="Gatsby"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/jest.png"
+                    alt="Jest"
+                    width={70}
+                    height={70}
+                  />
+                </li>
+                <li>
+                  <Image
+                    src="tech-icons/storybook.png"
+                    alt="StoryBook"
+                    width={70}
+                    height={70}
+                  />
+                </li>
               </ul>
               <h3>Professional</h3>
               <ul>

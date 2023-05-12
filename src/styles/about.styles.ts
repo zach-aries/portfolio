@@ -59,6 +59,18 @@ const styles = {
     fontStyle: "italic",
     color: colors.grey.base,
   }),
+  iconList: style({
+    $debugName: "iconList",
+    display: "flex",
+    flexWrap: "wrap",
+    listStyle: "none",
+    padding: 0,
+    $nest: {
+      "& > li": {
+        lineHeight: 0,
+      },
+    },
+  }),
 };
 
 export default styles;

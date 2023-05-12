@@ -63,6 +63,7 @@ const styles = {
     width: "100%",
   }),
   displayText: style({
+    fontFamily: "Arial",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -73,6 +74,7 @@ const styles = {
     backgroundColor: colors.white.base,
     "-webkit-text-stroke": `1px ${colors.white.base}`,
     backgroundClip: "text",
+    "-webkit-background-clip": "text",
     animationName: displayTextAnimation,
     animationDuration: "3s",
     animationTimingFunction: "ease-out",
