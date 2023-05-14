@@ -24,7 +24,7 @@ const aboutContent = {
           ],
         },
         {
-          description: "Implemented fronted error logging systems",
+          description: "Implemented frontend error logging systems",
           details: [
             "Typescript, React, Redux, Redux Saga, AWS Cloudwatch",
             "Created an error logging system that tracks, reports and alerts errors though AWS architecture",
