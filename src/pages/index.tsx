@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Software Engineer</title>
+        <title>Zachary Aries - Software Engineer</title>
         <meta name="description" content="Zachary Aries - Software Engineer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/portfolio/favicon.ico" />
